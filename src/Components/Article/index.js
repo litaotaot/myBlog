@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:28:04 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-05-12 14:22:51
+ * @Last Modified time: 2020-06-30 17:27:38
  * @descript  goArticle点击回调
  */
 
@@ -31,9 +31,9 @@ export default class Article extends Component {
                         <img src="https://www.arcinbj.com/upload/2020/2/%E4%B8%BB%E9%A1%B52-a3c9bab88f9c41efbc40c948ee8b45d6.jpeg" />
                     </div>
                     <div className="fontFamily">
-                        <h2 onClick={() => {goArticle(id)}}>诗和远方</h2>
+                        <h2 onClick={() => {goArticle(id)}}>孤独的寂寞</h2>
                         <p>
-                        人生，终如白驹过隙，总是只有在经历过后才会懂得，驻足停望的瞬间，于苍茫的心之阡陌上站成了一树寂静，浅尝那些所谓的岁月流连，道尽心事，诉尽衷肠。时光不会重来，如果有，那也只是你所谓的选择，我们终不能填补所有的空缺和遗憾，但终希望能有一个属于自己的归属，在幽幽远方，有一诗伴你随行
+                        刚才有人问我该怎么区分孤独与寂寞，有天你走在大街上突然下雨了，你躲在屋檐下找遍了手机通讯录也不知道要找谁给你送伞，那一刻你是孤独的，而寂寞，是你一个人躲在屋檐下安静的等雨停。
                         </p>
                     </div>
                 </div>

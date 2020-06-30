@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-12 14:04:40 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-05-12 15:04:32
+ * @Last Modified time: 2020-06-30 10:41:43
  */
 
 import React from 'react'
@@ -43,6 +43,7 @@ export default class ArticleTags extends React.Component {
                 borderColor={item.borderColor}
                 txt={item.txt}
                 status={item.status}
+                key={item.txt}
             />
         })
         return (

@@ -2,15 +2,15 @@
  * @Author: houxiaoling 
  * @Date: 2020-05-08 11:15:42 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-06-29 18:09:24
+ * @Last Modified time: 2020-06-30 10:57:45
  */
 
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import { BrowserRouter } from 'react-router-dom'
-import './index.css'
-import './reset.css' //重置样式
+import './index.scss'
+// import './reset.scss' //重置样式
 import * as serviceWorker from './serviceWorker'
 import App from './App'
 // import Header from './component/header/index'

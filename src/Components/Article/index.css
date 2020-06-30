@@ -5,10 +5,11 @@
     box-sizing: border-box;
     box-shadow: 0px 20px 10px 0px rgba(0,0,0,0.5);
     position: relative;
+    margin-bottom: 8vh;
 }
 .blog-acticle::after {
     content:"";
-    /* background-image:url('../../Image/flowers.png'); */
+    background-image:url('../../Image/flowers.png');
     opacity:0.5;
     top:0;
     left:0;
