@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:19 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-05-11 17:25:21
+ * @Last Modified time: 2020-06-30 17:43:32
  * @descript   search为props传入
  */
 
@@ -18,19 +18,16 @@ class Search extends React.Component {
         }
         
     }
-
     deletee() {
         this.setState({
             value: ''
         })  
     }
-
     change = (e) => {
         this.setState({
             value: e.target.value
         })
     }
-
     render() {
         const { search, focus, placeholder } = this.props
         const { value } = this.state
