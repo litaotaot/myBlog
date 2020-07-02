@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "386507",
+      "name": "图钉",
+      "font_class": "tuding",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "15282857",
+      "name": "锁链",
+      "font_class": "suolian",
+      "unicode": "e6eb",
+      "unicode_decimal": 59115
+    },
+    {
+      "icon_id": "15669044",
+      "name": "锁链",
+      "font_class": "suolian-copy",
+      "unicode": "f217",
+      "unicode_decimal": 61975
+    },
+    {
+      "icon_id": "15669046",
+      "name": "图钉",
+      "font_class": "tuding-copy",
+      "unicode": "f218",
+      "unicode_decimal": 61976
+    },
+    {
       "icon_id": "1810277",
       "name": "火",
       "font_class": "icon-test",
