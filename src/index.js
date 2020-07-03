@@ -2,7 +2,7 @@
  * @Author: houxiaoling 
  * @Date: 2020-05-08 11:15:42 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-06-30 10:57:45
+ * @Last Modified time: 2020-07-03 11:11:58
  */
 
 
@@ -70,9 +70,9 @@ import Tooltip from './Components/Tooltip'
 // }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <App />,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 serviceWorker.unregister();
