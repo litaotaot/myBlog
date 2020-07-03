@@ -5,6 +5,7 @@ import Home from './Main/Home/index'
 import Blog from './Main/Blog/index'
 import Record from './Main/Record/index'
 import NavigationBar from './Components/NavigationBar/index'
+import './App.css'
 class App extends React.Component {
   render() {
     return (
