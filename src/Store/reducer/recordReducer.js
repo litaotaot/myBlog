@@ -2,16 +2,16 @@
 
 
 const initState = {
-    modal1Visible: false
+    aa: false
 }
 
 const recordReducer = (state = initState, action) => {
     switch (action.type) {
-        case CHANGE_RECORD_MODAL:
+        case 'CHANGE_RECORD_MODAL':
             console.log('1111111111111111111111111')
             return {
                 ...state,
-                modal1Visible: action.value
+                aa: action.value
             }
             break;
         default:

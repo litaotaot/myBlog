@@ -2,12 +2,19 @@
  * @Author: Litao 
  * @Date: 2020-07-02 10:49:49 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-07-03 14:55:51
+ * @Last Modified time: 2020-07-07 09:32:43
  */
 
 import React from 'react'
+import { connect } from 'react-redux'
 import { Modal } from 'antd'
 
+// const mapStateToProps = state => ();
+// const mapDispatchToProps  = dispatch => ({
+//   onRedux: value => {
+//     dispatch({type: 'CHANGE_RECORD_MODAL', value})
+//   }
+// })
 class RecordPhoto extends React.Component {
   constructor(props) {
     super(props)
@@ -37,7 +44,6 @@ class RecordPhoto extends React.Component {
   render() {
     const { photoInfo } = this.props
     const { modal1Visible } = this.state
-    console.log(modal1Visible)
     return (
       <React.Fragment>
         <div className="photoContainer" onClick={() => this.showDialog()}>
@@ -74,3 +80,4 @@ class RecordPhoto extends React.Component {
 }
 
 export default RecordPhoto
+// export default connect(mapStateToProps, mapDispatchToProps)(RecordPhoto)
