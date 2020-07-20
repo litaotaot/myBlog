@@ -6,6 +6,83 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "16020565",
+      "name": "左对齐",
+      "font_class": "zuoduiqi-copy",
+      "unicode": "f219",
+      "unicode_decimal": 61977
+    },
+    {
+      "icon_id": "731513",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "779523",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "1790486",
+      "name": "超链接",
+      "font_class": "chaolianjie",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "6337472",
+      "name": "字体颜色",
+      "font_class": "zitiyanse",
+      "unicode": "ec85",
+      "unicode_decimal": 60549
+    },
+    {
+      "icon_id": "10047324",
+      "name": "居中对齐",
+      "font_class": "ziyuan1",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "10463855",
+      "name": "斜体",
+      "font_class": "xieti",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "10463866",
+      "name": "背景色",
+      "font_class": "beijingse",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "11179874",
+      "name": "首行缩进",
+      "font_class": "shouhangsuojin",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11322365",
+      "name": "加粗",
+      "font_class": "jiacu",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "12403109",
+      "name": "右对齐",
+      "font_class": "youduiqi",
+      "unicode": "e6c4",
+      "unicode_decimal": 59076
+    },
+    {
       "icon_id": "386507",
       "name": "图钉",
       "font_class": "tuding",
