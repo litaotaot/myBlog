@@ -10,6 +10,13 @@
     transform: scale(1);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.5s, transform 0.5s;
+    position: relative;
+    .popupTxt {
+        position: absolute;
+        bottom: -4em;
+        left: 0;
+        right: 0;
+    }
 }
 .popup:hover {
     transform: scale(1.3);
