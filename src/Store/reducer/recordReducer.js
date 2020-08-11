@@ -1,6 +1,3 @@
-
-
-
 const initState = {
     aa: false
 }
