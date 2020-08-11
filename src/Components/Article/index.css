@@ -83,17 +83,6 @@ h2:hover {
     color: #333333;
     cursor: default;
 }
-.acticleBtnLeft span {
-    /* width: 3em; */
-    height: 1em;
-    line-height: 1em;
-    padding: .2em;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: .2em;
-    margin-left: .3em;
-    cursor: default;
-}
 .acticleBtnRight {
     width: 18em;
     display: flex;

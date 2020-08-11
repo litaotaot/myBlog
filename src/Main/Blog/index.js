@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-06-29 17:34:12 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-06-30 17:27:52
+ * @Last Modified time: 2020-08-11 09:30:56
  */
 
 import React from 'react'
@@ -58,9 +58,10 @@ export default class Blog extends React.Component {
                 })
             } else if(docTop < 970) {
                 flag = true
-                this.blogRef.current.style.position = ""
-                this.blogRef.current.className = "blogSearchBox"
-                console.log(this.blogRef.current.style.position, this.blogRef.current.style.className)
+                if(this.blogRef.current) {
+                    this.blogRef.current.style.position = ""
+                    this.blogRef.current.className = "blogSearchBox"
+                }
             }
         })
     }

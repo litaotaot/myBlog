@@ -22,6 +22,15 @@
 .headerImg{
     width: 100%;
     height: 100vh;
+    position: relative;
+    .headerH1 {
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        &:hover {
+            color: skyblue;
+        }
+    }
 }
 .headerImg img{
     width: 100%;

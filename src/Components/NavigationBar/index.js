@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:29 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-03 15:49:24
+ * @Last Modified time: 2020-08-10 10:19:41
  */
 
 import React from 'react'
@@ -18,9 +18,9 @@ class NavigationBar extends React.Component {
                 { name: 'Blog', url: 'public/assets/img/blog.jpg' },
                 { name: 'Record', url: 'public/assets/img/record.jpg' },
                 { name: 'Personal', url: 'public/assets/img/personal.jpg' },
+                { name: 'TimeLine', url: 'public/assets/img/flower.jpg' },
                 { name: 'GitHub', url: 'public/assets/img/github.webp' },
                 { name: 'CSDN', url: 'public/assets/img/csdn.webp' },
-                { name: '', url: 'public/assets/img/flower.jpg' },
                 { name: '', url: 'public/assets/img/history.jpg' },
             ]
         }
@@ -36,6 +36,9 @@ class NavigationBar extends React.Component {
                 break;
             case 'record':
                 this.goToRecord(e)
+                break;
+            case 'timeline':
+                this.goToTimeLine(e)
                 break;
             case 'personal':
                 this.goToPersonal(e)
@@ -65,6 +68,10 @@ class NavigationBar extends React.Component {
 
     goToPersonal = (e) => {
         window.location.href = `#/record/detail`
+    }
+
+    goToTimeLine= (e) => {
+        window.location.href = `#/${e}`
     }
 
     goToGitHub = () => {

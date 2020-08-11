@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:52 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-07-29 18:03:16
+ * @Last Modified time: 2020-08-11 09:57:58
  */
 
 import React from 'react'
@@ -17,7 +17,7 @@ class HomeBody extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://172.16.163.53:5000/home').then(res => {
+        axios.get('http://172.16.163.65:5000/home').then(res => {
             if(res.status == 200) {
                 this.setState({
                     homeInfo: res.data
