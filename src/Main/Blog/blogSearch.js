@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-06-30 10:35:00 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-06-30 11:40:10
+ * @Last Modified time: 2020-08-12 16:19:35
  */
 
 import React from 'react'
@@ -14,9 +14,10 @@ class BlogSearch extends React.Component {
         super(props)
     }
     render() {
+        const { search, deleteTxt, placeholder } = this.props
         return (
             <div className="blogSearch">
-                <div><Search/></div>
+                <div><Search search={search} deleteTxt={deleteTxt} placeholder={placeholder}/></div>
                 <div>
                     <ul>
                         <li>Javacript</li>

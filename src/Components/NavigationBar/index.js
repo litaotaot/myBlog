@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:29 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-10 10:19:41
+ * @Last Modified time: 2020-08-12 17:30:19
  */
 
 import React from 'react'
@@ -17,11 +17,11 @@ class NavigationBar extends React.Component {
                 { name: 'Home', url: 'public/assets/img/home.jpg' },
                 { name: 'Blog', url: 'public/assets/img/blog.jpg' },
                 { name: 'Record', url: 'public/assets/img/record.jpg' },
-                { name: 'Personal', url: 'public/assets/img/personal.jpg' },
                 { name: 'TimeLine', url: 'public/assets/img/flower.jpg' },
+                { name: 'MessageArea', url: 'public/assets/img/history.jpg' },
+                { name: 'Personal', url: 'public/assets/img/personal.jpg' },
                 { name: 'GitHub', url: 'public/assets/img/github.webp' },
                 { name: 'CSDN', url: 'public/assets/img/csdn.webp' },
-                { name: '', url: 'public/assets/img/history.jpg' },
             ]
         }
     }
@@ -42,6 +42,9 @@ class NavigationBar extends React.Component {
                 break;
             case 'personal':
                 this.goToPersonal(e)
+                break;
+            case 'messagearea':
+                this.goToMessageArea(e)
                 break;
             case 'github':
                 this.goToGitHub()
@@ -67,10 +70,14 @@ class NavigationBar extends React.Component {
     }
 
     goToPersonal = (e) => {
-        window.location.href = `#/record/detail`
+        window.location.href = `#/${e}/`
     }
 
     goToTimeLine= (e) => {
+        window.location.href = `#/${e}`
+    }
+
+    goToMessageArea = (e) => {
         window.location.href = `#/${e}`
     }
 

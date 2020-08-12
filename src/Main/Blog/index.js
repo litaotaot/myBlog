@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-06-29 17:34:12 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-11 18:08:36
+ * @Last Modified time: 2020-08-12 17:02:23
  */
 
 import React from 'react'
@@ -36,11 +36,15 @@ class Blog extends React.Component {
         super(props)
         this.blogRef = React.createRef()
         this.state = {
-            originData: []
+            originData: [],
+            originTags: [],
+            originHotSearch: []
         }
     }
     componentDidMount() {
         this.getData()
+        this.getTags()
+        this.getHotSearch()
         this.listenerSearch()
     }
 
@@ -96,7 +100,27 @@ class Blog extends React.Component {
             if (res.status == 200) {
                 // this.props.getBlogList(res.data)
                 this.setState({
-                    originData: res.data
+                    originData: res.data ? res.data : []
+                })
+            }
+        })
+    }
+
+    getTags = () => {
+        axios.get('http://172.16.163.65:5000/blog/tags').then(res => {
+            if (res.status == 200) {
+                this.setState({
+                    originTags: res.data ? res.data : []
+                })
+            }
+        })
+    }
+
+    getHotSearch = () => {
+        axios.get('http://172.16.163.65:5000/blog/hotSearch').then(res => {
+            if(res.status == 200) {
+                this.setState({
+                    originHotSearch: res.data ? res.data : []
                 })
             }
         })
@@ -106,10 +130,38 @@ class Blog extends React.Component {
         window.location.href = `#/blog/detail?article=${id}`
     }
 
+    search = (v) => {
+        axios.post('http://172.16.163.65:5000/blog/search',{
+            searchTxt: v
+        }).then(res => {
+            if(res.status === 200) {
+                this.setState({
+                    originData: res.data ? res.data : []
+                })
+            }
+        })
+    }
+
+    goToTags = (v) => {
+        axios.post('http://172.16.163.65:5000/blog/getTags',{
+            searchTags: v
+        }).then(res => {
+            if(res.status === 200) {
+                this.setState({
+                    originData: res.data ? res.data : []
+                })
+            }
+        })
+    }
+
+    deleteTxt = () => {
+        this.getData()
+    }
+
     render() {
-        const { originData } = this.state
+        const { originData, originTags, originHotSearch } = this.state
         // const { blogList } = this.props
-        const ArticleList = originData.map((item, index) => {
+        const ArticleList = originData.length && originData.map((item, index) => {
             return <Article goArticle={() => {this.goArticle(item.id)}} articleInfo={item} key={index} />
         })
         return (
@@ -121,13 +173,13 @@ class Blog extends React.Component {
                 </div>
                 <div className="blogRight">
                     <div ref={this.blogRef} className="blogSearchBox">
-                        <BlogSearch />
+                        <BlogSearch search={this.search} deleteTxt={this.deleteTxt} placeholder={'请输入内容'}/>
                     </div>
                     <div className="blogBox">
-                        <HotSearch />
+                        <HotSearch originHotSearch={originHotSearch} goArticle={this.goArticle} />
                     </div>
                     <div className="blogBox">
-                        <ArticleTags />
+                        <ArticleTags originTags={originTags} goToTags={this.goToTags} />
                     </div>
                 </div>
             </div>

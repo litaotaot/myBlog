@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-12 11:39:24 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-06-30 10:42:00
+ * @Last Modified time: 2020-08-12 17:08:34
  * @descript  className:是否拥有hover,skew,rotate状态(默认无) color: 文字颜色 borderColor: 边框颜色 backgroundColor: 背景颜色  颜色默认黑色
  */
 
@@ -21,7 +21,7 @@ export default class Label extends React.Component {
     }
 
     render() {
-        const { color, borderColor, backgroundColor, txt, status } = this.props
+        const { color, borderColor, backgroundColor, txt, status, goToTags } = this.props
         const { defaultColor, text } = this.state
         let className
         switch (status) {
@@ -43,6 +43,7 @@ export default class Label extends React.Component {
                 <span
                     className={ className }
                     style={{ color: color || defaultColor, borderColor: borderColor || defaultColor, backgroundColor: backgroundColor || defaultColor }}
+                    onClick={() => {goToTags(txt || text)}}
                 >
                     {txt || text}
                 </span>

@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-08-11 10:55:14 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-11 18:12:09
+ * @Last Modified time: 2020-08-12 09:54:52
  */
 
 import React from 'react'
@@ -19,7 +19,7 @@ class Detail extends React.Component {
 
     componentDidMount() {
         let params = window.location.href.split('=')[1]   //获取文章数据
-        axios.get('http://172.16.163.65:5000/blog/detail').then(res => {
+        axios.get('http://172.16.163.65:5000/blog/detail?id='+params).then(res => {
             this.setState({
                 originData: res.data.length ? res.data[0] : {}
             })

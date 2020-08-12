@@ -31,6 +31,7 @@
     right: 43px;
     line-height: 34px;
     color: #666;
+    cursor: pointer;
 }
 
 .sousuo {
@@ -39,4 +40,5 @@
     line-height: 34px;
     color: black;
     font-size: 24px;
+    cursor: pointer;
 }

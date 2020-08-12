@@ -7,7 +7,7 @@
     border-radius: .2em;
     /* margin-left: .3em; */
     margin: .3em;
-    cursor: default;
+    cursor: pointer;
 }
 
 .labelHover {
@@ -18,7 +18,7 @@
     border: 1px solid black;
     border-radius: .2em;
     margin: .3em;
-    cursor: default;
+    cursor: pointer;
     transition: all .3s;
 }
 
@@ -34,7 +34,7 @@
     border: 1px solid black;
     border-radius: .2em;
     margin: .3em;
-    cursor: default;
+    cursor: pointer;
     transition: all .3s;
 }
 .labelRotate:hover {
@@ -49,7 +49,7 @@
     border: 1px solid black;
     border-radius: .2em;
     margin: .3em;
-    cursor: default;
+    cursor: pointer;
     transition: all .3s;
 }
 .labelSkew:hover {

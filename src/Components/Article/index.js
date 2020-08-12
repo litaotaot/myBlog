@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:28:04 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-11 17:41:45
+ * @Last Modified time: 2020-08-12 15:34:38
  * @descript  goArticle点击回调
  */
 
@@ -24,14 +24,14 @@ export default class Article extends Component {
 
     render() {
         const { goArticle, articleInfo } = this.props
-        const labelList = articleInfo && articleInfo.blogTags.split(',').map((item, index) => {
+        const labelList = articleInfo.blogTags && articleInfo.blogTags.split(',').map((item, index) => {
             return <Label txt={item} key={index} />
         })
         return (
             <div className="blog-acticle">
                 <div className="acticle-top">
                     <div onClick={() => { goArticle(articleInfo.id) }}>
-                        <img src="https://www.arcinbj.com/upload/2020/2/%E4%B8%BB%E9%A1%B52-a3c9bab88f9c41efbc40c948ee8b45d6.jpeg" />
+                        <img src={articleInfo.blogImg} />
                     </div>
                     <div className="fontFamily">
                         <h2 onClick={() => { goArticle(articleInfo.id) }}>{articleInfo.blogName}</h2>

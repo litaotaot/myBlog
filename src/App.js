@@ -4,7 +4,7 @@ import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './Main/Home/index'
 import Blog from './Main/Blog/index'
 import Record from './Main/Record/index'
-// import Detail from './Main/Detail/index'
+import MessageArea from './Main/MessageArea/index'
 import Detail from './Main/Blog/Detail/index'
 import TimeLine from './Main/TimeLine/index'
 import NavigationBar from './Components/NavigationBar/index'
@@ -19,6 +19,7 @@ class App extends React.Component {
             <Route path="/record" exact component={Record}></Route>
             <Route path="/timeline" exact component={TimeLine}></Route>
             <Route path="/blog/detail" exact component={Detail}></Route>
+            <Route path="/messagearea" exact component={MessageArea}></Route>
             <Redirect path="/" to='/home'></Redirect>
           </Switch>
           <NavigationBar/>
