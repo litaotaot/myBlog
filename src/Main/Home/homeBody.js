@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:52 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-11 16:21:58
+ * @Last Modified time: 2020-08-13 11:05:53
  */
 
 import React from 'react'
@@ -28,7 +28,13 @@ class HomeBody extends React.Component {
     render() {
         const { homeInfo } = this.state
         const divBox = homeInfo && homeInfo.map((item, index) => {
-            return <div key={item.id} className={'item item-'+index}><img src={item.homeUrl} style={{width: '100%',height: '100%'}} alt=""/></div>
+            return (<div key={item.id} className={'item item-'+index} style={{ backgroundImage: `url(${item.homeUrl})` }}>
+                        {/* <img src={} style={{width: '100%',height: '100%'}} alt=""/> */}
+                        <div className='itemTop'>面对疾风吧</div>
+                        <div className='itemBottom'>哈萨克</div>
+                        {/* <div className='round'></div> */}
+                        吾虽浪迹天涯， 却从未迷失本心
+                    </div>)
         })
         return (
             <div className="containerBac">

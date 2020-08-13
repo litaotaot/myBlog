@@ -7,6 +7,7 @@ import Record from './Main/Record/index'
 import MessageArea from './Main/MessageArea/index'
 import Detail from './Main/Blog/Detail/index'
 import TimeLine from './Main/TimeLine/index'
+import Personal from './Main/Personal/index'
 import NavigationBar from './Components/NavigationBar/index'
 class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
             <Route path="/timeline" exact component={TimeLine}></Route>
             <Route path="/blog/detail" exact component={Detail}></Route>
             <Route path="/messagearea" exact component={MessageArea}></Route>
+            <Route path="/personal" exact component={Personal}></Route>
             <Redirect path="/" to='/home'></Redirect>
           </Switch>
           <NavigationBar/>

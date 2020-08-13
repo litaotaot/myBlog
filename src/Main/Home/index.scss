@@ -15,10 +15,61 @@
     background-image: url(https://yssimage.oss-cn-hangzhou.aliyuncs.com/bg9.jpg);
 }
 .item {
-    font-size: 4em;
+    font-size: 1em;
     text-align: center;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-  }
+    position: relative;
+    color: white;
+    .itemTop {
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0%;
+        z-index: -1;
+        opacity: 0;
+        transition: all .5s ease-out;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .itemBottom {
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        bottom: 0%;
+        z-index: -1;
+        opacity: 0;
+        transition: all .5s ease-out;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    // .round {
+    //     position: absolute;
+    //     width: 2em;
+    //     height: 2em;
+    //     border-radius: 50%;
+    //     border: 1px solid red;
+    //     top: 0;
+    // }
+    &:hover {
+        color: black;
+        .itemTop {
+            height: 50%;
+            opacity: 1;
+            z-index: 1;
+        }
+        .itemBottom {
+            height: 50%;
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+}
 .headerImg{
     width: 100%;
     height: 100vh;
