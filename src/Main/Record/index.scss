@@ -1,7 +1,68 @@
 .recordContainer {
     padding: 5vh 5vw;
     // min-height: 100vh;
+    position: relative;
     box-sizing: border-box;
+    min-height: 100vh;
+    &::after {
+        content:"";
+        background-image:url('../../Image/48.jpg');
+        opacity:0.5;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        position:absolute;
+        z-index: -1;
+    }
+    .recordBox {
+        width: 4em;
+        height: 4em;
+        position: absolute;
+        top: 1em;
+        right: 2em;
+        cursor: pointer;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3);
+        .recordBlock {
+            display: none;
+            width: 100%;
+            height: 100%;
+            ul {
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: space-around;
+                li {
+                    width: 1.6em;
+                    height: 1.6em;
+                    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+                }
+            }
+        }
+        .recordList {
+            width: 100%;
+            height: 100%;
+            ul {
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: space-around;
+                li {
+                    width: 3.2em;
+                    height: 1.3em;
+                    border-bottom: 1px solid #b8b6b6;
+                    span {
+                        display: inline-block;
+                        width: 1em;
+                        height: 1em;
+                        border: 1px solid #b8b6b6;
+                    }
+                }
+            }
+        }
+    }
     .photoContainer{
         display: flex;
         justify-content: space-around;
@@ -18,9 +79,12 @@
             div {
                 width: 100%;
                 height: 80%;
-                background-size: cover;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
                 img {
-                    width: 100%;
+                    width: 32%;
+                    height: 32%;
                 }
             }
             p {

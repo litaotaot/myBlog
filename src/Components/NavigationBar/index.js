@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-05-11 17:23:29 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-12 17:30:19
+ * @Last Modified time: 2020-08-17 17:25:59
  */
 
 import React from 'react'
@@ -17,11 +17,11 @@ class NavigationBar extends React.Component {
                 { name: 'Home', url: 'public/assets/img/home.jpg' },
                 { name: 'Blog', url: 'public/assets/img/blog.jpg' },
                 { name: 'Record', url: 'public/assets/img/record.jpg' },
-                { name: 'TimeLine', url: 'public/assets/img/flower.jpg' },
                 { name: 'MessageArea', url: 'public/assets/img/history.jpg' },
                 { name: 'Personal', url: 'public/assets/img/personal.jpg' },
                 { name: 'GitHub', url: 'public/assets/img/github.webp' },
                 { name: 'CSDN', url: 'public/assets/img/csdn.webp' },
+                { name: 'Login', url: 'public/assets/img/flower.jpg' },
             ]
         }
     }
@@ -37,8 +37,8 @@ class NavigationBar extends React.Component {
             case 'record':
                 this.goToRecord(e)
                 break;
-            case 'timeline':
-                this.goToTimeLine(e)
+            case 'login':
+                this.goToLogin(e)
                 break;
             case 'personal':
                 this.goToPersonal(e)
@@ -73,7 +73,7 @@ class NavigationBar extends React.Component {
         window.location.href = `#/${e}/`
     }
 
-    goToTimeLine= (e) => {
+    goToLogin= (e) => {
         window.location.href = `#/${e}`
     }
 
@@ -92,7 +92,7 @@ class NavigationBar extends React.Component {
     render() {
         const { configData } = this.state
         let navigationBlock = configData.map((item, index) => {
-            return <div className="popup" style={{ backgroundImage: `url(${require('../../../'+item.url)})`, backgroundSize: '100% 100%' }} key={index} onClick={() => { this.navigation(item.name.toLowerCase()) }}>
+            return <div className="popup" style={{ backgroundImage: `url(${require('../../../'+item.url)})`, backgroundSize: '100% 100%', cursor: 'pointer' }} key={index} onClick={() => { this.navigation(item.name.toLowerCase()) }}>
                 <span className="popupTxt">{item.name}</span>
             </div>
         })

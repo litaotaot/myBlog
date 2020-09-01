@@ -2,13 +2,14 @@
  * @Author: Litao 
  * @Date: 2020-07-02 10:49:49 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-07-07 09:32:43
+ * @Last Modified time: 2020-08-18 11:12:37
  */
 
 import React from 'react'
 import { connect } from 'react-redux'
 import { Modal } from 'antd'
 
+import { getRandom } from '../../exp'
 // const mapStateToProps = state => ();
 // const mapDispatchToProps  = dispatch => ({
 //   onRedux: value => {
@@ -44,16 +45,25 @@ class RecordPhoto extends React.Component {
   render() {
     const { photoInfo } = this.props
     const { modal1Visible } = this.state
+    const photoList = photoInfo.map(item => {
+      return { id: item.id, recordName: item.recordName, recordUrl: item.recordUrl, rotate: getRandom(-15, 15)+'deg', }
+    })
     return (
       <React.Fragment>
         <div className="photoContainer" onClick={() => this.showDialog()}>
           {
-            photoInfo.map((item, index) => {
+            photoList.map(item => {
               return (
-                <div className="recordPhoto" style={{ transform: `rotate(${item.rotate})` }} key={index}>
+                <div className="recordPhoto" style={{ transform: `rotate(${item.rotate})` }} key={item.id}>
                   <i className="iconfont icon-suolian-copy"></i>
-                  <p>{item.photoTxt}</p>
-                  <div style={{ backgroundImage: `url(${require('../../Image/' + item.photoImg)})` }}></div>
+                  <p>{item.recordName}</p>
+                  <div className="recordImg">
+                    { 
+                      item.recordUrl.split(',').map(item => {
+                        return <img src={item} />
+                      })
+                    }
+                  </div>
                 </div>
               )
             })

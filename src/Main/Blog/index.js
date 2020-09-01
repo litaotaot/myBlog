@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-06-29 17:34:12 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-12 17:02:23
+ * @Last Modified time: 2020-08-17 17:51:56
  */
 
 import React from 'react'
@@ -168,7 +168,7 @@ class Blog extends React.Component {
             <div className="blogContainer">
                 <div className="blogLeft">
                     {
-                        ArticleList
+                        ArticleList ? ArticleList : ''
                     }
                 </div>
                 <div className="blogRight">
