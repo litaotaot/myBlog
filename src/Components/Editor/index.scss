@@ -7,6 +7,24 @@
     border: 1px solid #999999;
     width: 100%;
     padding: .5em;
+    min-height: 20em;
+}
+.swatchesUl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 84px;
+    height: 84px;
+    justify-content: space-around;
+    align-content: space-around;
+    border: 1px solid #999999;
+    background-color: #e7e4e4;
+}
+.swatchesLi {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999999;
+    box-sizing: content-box;
+    cursor: pointer;
 }
 .iconTextareaStyleFoucs {
     box-shadow: 0px 0px 1px 1px #409eff;
@@ -20,4 +38,65 @@
 }
 .spanI {
     font-style: oblique;
+}
+.myEditorBottom {
+    position: relative;
+    .swatchesBox {
+        position: absolute;
+        left: 100px;
+    }
+    .showBackSwatches {
+        position: absolute;
+        left: 150px;
+    }
+    .showFace {
+        position: absolute;
+        .facesUl {
+            display: flex;
+            flex-wrap: wrap;
+            width: 298px;
+            height: 146px;
+            justify-content: space-around;
+            align-content: space-around;
+            border: 1px solid #999999;
+            background-color: #e7e4e4;
+            .faceLi {
+                width: 25px;
+                height: 25px;
+                border: 1px solid #999999;
+                box-sizing: content-box;
+                cursor: pointer;
+            }
+        }
+    }
+    .showImg {
+        position: absolute;
+        left: 280px;
+        border: 1px solid #999999;
+        background-color: #e7e4e4;
+        width: 20em;
+        height: 7em;
+        padding: 1em;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        input {
+            &:nth-child(1) {
+                border: 1px solid #999999;
+                border-radius: 10%/5%;
+                width: 76%;
+            }
+            &:nth-child(2) {
+                border: 1px solid #999999;
+                width: 20%;
+                margin-left: 4%;
+                text-align: center;
+                cursor: pointer;
+            }
+            &:nth-child(3) {
+                margin-top: .5em;
+            }
+        }
+    }
 }

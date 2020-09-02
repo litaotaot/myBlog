@@ -2,7 +2,7 @@
  * @Author: Litao 
  * @Date: 2020-07-07 09:35:28 
  * @Last Modified by: Litao
- * @Last Modified time: 2020-08-12 17:28:56
+ * @Last Modified time: 2020-09-02 10:30:06
  */
 import React from 'react'
 
@@ -18,8 +18,8 @@ import './index.scss'
     render() {
         return (
             <div className="detailContainer">
-                {/* <MessageBoard/>s */}
-                <Editor/>
+                <MessageBoard/>
+                {/* <Editor/> */}
             </div>
         )
     }
